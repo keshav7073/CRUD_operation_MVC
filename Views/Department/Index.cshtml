@@ -1,0 +1,16 @@
+﻿@using CRUD_OperationsInMVC.Models
+@model IEnumerable<Department>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<ul>
+    @foreach(Department department in @Model)
+            {
+              <li>
+                  @Html.ActionLink(department.Name, "Index", "Employee", new { id = department.Id }, null);
+              </li>
+            }
+</ul>
+
